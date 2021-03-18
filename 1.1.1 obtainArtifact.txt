@@ -1,0 +1,35 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+void obtainArtifact()
+{
+    turnRight();
+    moveForward();
+    turnLeft();
+    
+    repeat (3)
+    {
+        moveForward();
+    }    
+    
+    turnLeft();
+    moveForward();
+    pickBeeper();
+    moveForward();
+    turnLeft();
+    
+    repeat (3)
+    {
+        moveForward();
+    }
+    
+    turnLeft();
+    moveForward();
+    dropBeeper();
+}

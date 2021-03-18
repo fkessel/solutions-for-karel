@@ -1,0 +1,54 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+while loops are not allowed yet
+*/
+
+void mowTheLawn()
+{
+    moveForward();
+    repeat (2)
+    {
+        collectBeeper();
+        nextRowRight();
+        collectBeeper();
+        nextRowLeft();
+    }
+    collectBeeper();
+    nextRowRight();
+    collectBeeper();
+}   
+
+void collectBeeper()
+{
+    repeat (6)
+    {
+        if (onBeeper())
+        {
+            pickBeeper();
+            moveForward();
+        }
+    }
+}
+
+void nextRowRight()
+{
+    repeat (2)
+    {
+        turnLeft();
+        moveForward();
+    }   
+}
+
+void nextRowLeft()
+{
+    repeat (2)
+    {
+        turnRight();
+        moveForward();
+    }
+}
