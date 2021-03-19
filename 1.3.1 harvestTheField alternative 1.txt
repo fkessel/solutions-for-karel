@@ -1,0 +1,50 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+F7 = onBeeper();
+F8 = beeperAhead();
+F9 = leftIsClear();
+F10= frontIsClear();
+F11= rightIsClear();
+while loops are not allowed yet
+*/
+
+void harvestTheField(){
+    repeat (4){
+        pickUpBeeper();
+    }
+    iHaveNoBetterSolutionAtTheMoment();
+    repeat (9){
+        pickUpBeeper();
+    }
+    iHaveNoBetterSolutionAtTheMoment();
+    repeat (4){
+        pickUpBeeper();
+    }
+}
+
+void pickUpBeeper(){
+    
+    if (beeperAhead()){
+        moveForward();
+        pickBeeper();
+        turnRight();
+        moveForward();
+        turnLeft();
+    }
+    else if (leftIsClear() && frontIsClear() && rightIsClear()){
+        turnAround();
+    }
+}
+
+void iHaveNoBetterSolutionAtTheMoment(){
+    repeat (2){
+        moveForward();
+        moveForward();
+        turnLeft();
+    }
+}
