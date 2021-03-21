@@ -1,0 +1,43 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+F7 = onBeeper();
+F8 = beeperAhead();
+F9 = leftIsClear();
+F10= frontIsClear();
+F11= rightIsClear();
+While loops are not allowed yet 
+*/
+
+void repairTheStreet(){
+    repeat (5){
+        placeBeeper();
+        wallAhead();
+        if (!rightIsClear()){
+            moveForward();
+            moveForward();
+        }
+    }
+    placeBeeper();
+}
+
+void wallAhead(){
+    if (!frontIsClear()){
+        turnAround();
+        moveForward();
+        turnRight();
+        moveForward();
+    }
+}
+
+void placeBeeper(){
+    if (rightIsClear()){
+        turnRight();
+        moveForward();
+        dropBeeper();
+    }
+}
